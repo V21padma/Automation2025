@@ -8,8 +8,10 @@ import java.awt.*;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-      features = "src/test/resources/testdesignpackage" ,
-        glue = "stepdefinition"
+      features = {"src/test/resources/testdesignpackage" },
+        glue = {"stepdefinition"} ,
+        tags = "@sc05" ,
+        plugin = {"pretty"}
 )
 public class Runner {
 
