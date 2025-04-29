@@ -11,16 +11,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import utilils.BrowserBase;
+
+import java.io.IOException;
 
 public class AmazonSteps
 {
     WebDriver driver;
     WebElement catergoryDropdown;
 @Given("user navigates to amazon homepage")
-        public void amazonHomepage(){
+        public void amazonHomepage() throws IOException {
+    BrowserBase b= new BrowserBase();
+    driver = b.browserBase();  //return
 
-        driver = new ChromeDriver();
-        driver.get("https://www.amazon.in");
+
+        /*driver = new ChromeDriver();
+        driver.get("https://www.amazon.in");*/
 
     }
     @When("user enter the search keyword {string}")
