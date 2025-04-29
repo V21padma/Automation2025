@@ -10,7 +10,7 @@ import java.awt.*;
 @CucumberOptions(
       features = {"src/test/resources/testdesignpackage" },
         glue = {"stepdefinition"} ,
-        tags = "@sc05" ,
+        tags = "@sc01" ,
         plugin = {"pretty"}
 )
 public class Runner {
